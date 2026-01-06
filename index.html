@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -250,3 +251,257 @@
     </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 電玩創意嘉年華</title>
+    <style>
+        :root {
+            /* 🎨 電玩霓虹主題色系 */
+            --color01: #0f0f1a;   /* 深底背景 */
+            --color02: #14182b;   /* 導覽列背景 */
+            --color03: #1e1f3b;   /* 卡片底 */
+            --color04: #2a2e4b;   /* 次要底色 */
+            --color05: #0a0c18;   /* 全域背景 */
+            --color06: #00f5ff;   /* 亮青藍 */
+            --color07: #ff00d4;   /* 亮粉紫 */
+            --color08: #11152a;   /* content 背景 */
+            --color09: #282c4f;
+            --color10: #1de9b6;   /* hover亮綠 */
+            --color11: #ff9800;
+            --color12: #2196f3;
+            --color13: #e91e63;
+            --color14: #673ab7;
+            --color15: #03a9f4;
+            --color16: #ffffff;   /* 白字 */
+            --textcolor01: #f5f5f5;
+            --textcolor02: #bbbbbb;
+            --textcolor03: #00f5ff;
+        }
+
+        body {
+            background-color: var(--color05);
+            margin: 0;
+            font-family: 'Microsoft JhengHei', sans-serif;
+        }
+
+        .wrapper {
+            width: 1024px;
+            margin: 0 auto;
+        }
+
+        .banner img {
+            width: 100%;
+        }
+
+        nav {
+            background-color: var(--color02);
+            text-align: center;
+        }
+
+        nav ul {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            float: left;
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            display: block;
+            color: var(--textcolor01);
+            font-size: 18px;
+            padding: 15px 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--color10);
+            color: var(--color16);
+            box-shadow: 0 0 10px var(--color10);
+        }
+
+        .content {
+            text-align: center;
+            background-color: var(--color08);
+            padding: 30px 0;
+        }
+
+        .content h1 {
+            color: var(--color06);
+            font-size: 32px;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--color07);
+        }
+
+        .content p {
+            font-size: 18px;
+            color: var(--textcolor02);
+            line-height: 1.6;
+        }
+
+        .content a {
+            display: block;
+            width: 180px;
+            height: 50px;
+            background-color: var(--color07);
+            margin: 20px auto;
+            color: var(--color16);
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 50px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 0 15px var(--color07);
+        }
+
+        .content a:hover {
+            background-color: var(--color06);
+            box-shadow: 0 0 25px var(--color06);
+        }
+
+        /* 卡片區域 */
+        .card-container {
+            text-align: center;
+            padding: 30px 0;
+            overflow: hidden;
+        }
+
+        .card {
+            float: left;
+            width: 30%;
+            margin-right: 5%;
+            background-color: var(--color03);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .card-last {
+            margin-right: 0;
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+        }
+
+        .card h2 {
+            color: var(--color06);
+            margin-top: 15px;
+        }
+
+        .card p {
+            color: var(--textcolor02);
+            padding: 0 10px 20px 10px;
+        }
+
+        .footer {
+            background-color: var(--color02);
+            color: var(--textcolor01);
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        /* 滑動動畫 */
+        .roller {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .roller-box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: translateY(-100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .roller:hover .roller-box {
+            transform: translateY(0);
+            transition: transform 1s;
+        }
+
+        .roller-box a {
+            background-color: var(--color07);
+            padding: 10px 25px;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 0 10px var(--color07);
+        }
+
+        .roller-box a:hover {
+            background-color: var(--color06);
+            box-shadow: 0 0 20px var(--color06);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z2FtZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="電玩嘉年華Banner">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="fw-900">活動介紹</a></li>
+                <li><a href="#" class="fw-900">展區特色</a></li>
+                <li><a href="#" class="fw-900">賽事報名</a></li>
+                <li><a href="#" class="fw-900">聯絡我們</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <h1>2025 電玩創意嘉年華</h1>
+            <p>年度最受矚目的遊戲盛會來了！從電競比賽、虛擬實境體驗、到獨立遊戲展示，讓你一次沉浸在次世代娛樂的無限可能。</p>
+            <p>邀請全球玩家、開發者與創作者，共同打造屬於遊戲的夢想殿堂。</p>
+            <a href="#" class="fw-900">立即報名</a>
+
+            <div class="card-container">
+                <div class="card roller">
+                    <div class="roller-box">
+                        <a href="#">參加比賽</a>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d6?auto=format&fit=crop&w=800&q=80" alt="電競比賽">
+                    <h2>電競挑戰賽</h2>
+                    <p>英雄聯盟、VALORANT、Apex Legends 等熱門賽事熱血登場，展現你的極限操作！</p>
+                </div>    
+
+                <div class="card roller">
+                    <div class="roller-box">
+                        <a href="#">探索展區</a>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1607083206968-13611e3b8e3d?auto=format&fit=crop&w=800&q=80" alt="展覽區">
+                    <h2>創意遊戲展區</h2>
+                    <p>來自世界各地的獨立開發者展示最新力作，體驗創意無限的遊戲世界。</p>
+                </div> 
+
+                <div class="card card-last roller">
+                    <div class="roller-box">
+                        <a href="#">VR體驗</a>
+                    </div>                   
+                    <img src="https://images.unsplash.com/photo-1581091215367-59ab6b88d1cf?auto=format&fit=crop&w=800&q=80" alt="VR 體驗">
+                    <h2>沉浸式VR體驗</h2>
+                    <p>戴上頭盔，進入虛擬現實的冒險世界，感受遊戲與現實的無縫融合。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            主辦單位：台灣遊戲創新協會 | 聯絡電話：02-9876-5432 | © 2025 GameFest
+        </div>
+    </div>
+</body>
+</html>
+>>>>>>> 0333ba600527afd73a698861bfcfcc202cbfe0b5
