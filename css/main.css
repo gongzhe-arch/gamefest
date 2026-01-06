@@ -1,0 +1,224 @@
+/* ==============================================================
+   1️⃣ 變數（在此統一管理色彩、字型、間距等全局設定）
+   ============================================================== */
+:root {
+    /* 主色系 */
+    --color-primary: #330DDB;
+    /* 主要按鈕、連結 */
+    --color-primary-hover: #A17617;
+    /* 主要按鈕Hover */
+    --color-secondary: #DA942B;
+    /* 次要背景（導覽列） */
+    --color-accent: #A30909;
+    /* 重要文字（標題） */
+    --color-footer-bg: #5D630D;
+    /* Footer 背景 */
+    --color-bg: #F5F5F5;
+    /* 整體背景 */
+    --color-text: #333333;
+    /* 正文文字 */
+
+    /* 文字與間距 */
+    --fs-base: 1rem;
+    /* 基礎字型大小 (16px) */
+    --fs-lg: 2.5rem;
+    /* 大標題 */
+    --fs-md: 1.125rem;
+    --fs-sm: 1rem;
+
+    --radius: .5rem;
+}
+
+/* ==============================================================
+   2️⃣ 基礎 Reset & 全局設定
+   ============================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+    /* 1rem = 16px */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color05);
+    color: var(--color05);
+}
+
+/* 讓圖片（若未來再加入）不會超出容器 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==============================================================
+   3️⃣ 版面容器
+   ============================================================== */
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------
+   4️⃣ Header – Logo + Nav
+   -------------------------------------------------------------- */
+.site-header {
+    position: relative;
+}
+
+/* LOGO（使用背景圖） */
+.logo {
+    width: 100%;
+    /* 以比例維持 1024:360（約 2.84:1） */
+    padding-top: 35%;
+    /* 360/1024 ≈ 35% */
+    background-image: url("../images/filter.avif");
+    background-size: cover;
+    background-position: center;
+}
+
+/* 主導覽列 */
+.site-nav {
+    background-color: var(--color-secondary);
+    text-align: center;
+}
+
+/* Flex 版面：大螢幕水平、手機版自動換行 */
+.site-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+/* 連結樣式 */
+.site-nav a {
+    display: block;
+    padding: .9rem 1.5rem;
+    margin: .4rem;
+    border-radius: var(--radius);
+    background-color: var(--color-primary);
+    color: var(--color-light, #fff);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    transition: background-color .3s, color .3s, box-shadow .2s;
+}
+
+/* Hover 效果 */
+.site-nav a:hover,
+.site-nav a:focus {
+    background-color: var(--color-primary-hover);
+    color: #0a0a0a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+nav ul {
+    display: block;
+}
+
+nav ul li {
+    float: none;
+}
+
+nav ul li a {
+    border-radius: 0;
+    margin-top: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+/* --------------------------------------------------------------
+   5️⃣ Hero (主視覺區)
+   -------------------------------------------------------------- */
+.hero {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: var(--fs-lg);
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+}
+
+/* 文字可自行替換；這裡示範兩段文字 */
+.hero p {
+    font-size: var(--fs-md);
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+}
+
+/* CTA 按鈕 */
+.cta-btn {
+    display: inline-block;
+    background-color: #CAB698;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    padding: .8rem 1.6rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+    transition: box-shadow .2s, transform .2s;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, .2);
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------
+   6️⃣ Footer
+   -------------------------------------------------------------- */
+.site-footer {
+    background-color: var(--color-footer-bg);
+    color: #fff;
+    text-align: center;
+    font-size: var(--fs-sm);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* ==============================================================
+   7️⃣ RWD – 手機版 (max-width: 768px)
+   ============================================================== */
+@media (max-width: 768px) {
+    .site-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        /* 讓 li 撐滿整行 */
+    }
+
+    .site-nav a {
+        margin: .2rem 0;
+        border-radius: 0;
+        font-size: .95rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: var(--fs-sm);
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-btn {
+        font-size: var(--fs-sm);
+        padding: .6rem 1.2rem;
+    }
+}

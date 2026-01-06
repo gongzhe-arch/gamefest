@@ -1,0 +1,241 @@
+:root {
+    --theme-color-primary: #8A4F2C;
+    /* 咖啡/卡其色系 - 主色 */
+    --theme-color-secondary: #EADBC8;
+    /* 淺米色系 - 次要背景色 */
+    --theme-color-highlight: #A0B950;
+    /* 清新綠色系 - 強調色 */
+    --theme-color-text: #2c2c2c;
+    /* 深灰色 - 主要文字顏色 */
+}
+
+.text-01 {
+    color: var(--theme-color-primary) !important;
+}
+
+.text-02 {
+    color: var(--theme-color-highlight) !important;
+}
+
+.text-03 {
+    color: var(--theme-color-text) !important;
+}
+
+.bg-01 {
+    background-color: var(--theme-color-primary) !important;
+    color: white !important;
+}
+
+.bg-02 {
+    background-color: var(--theme-color-highlight) !important;
+    color: white !important;
+}
+
+.bg-03 {
+    background-color: var(--theme-color-secondary) !important;
+    color: var(--theme-color-text) !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+/* 覆蓋 Bootstrap 官方顏色 */
+.bg-secondary,
+.bg-info,
+.bg-dark {
+    background-color: var(--theme-color-text) !important;
+    color: white !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--theme-color-highlight) !important;
+}
+
+/* Modal 顏色替換 */
+.modal-header.text-bg-warning {
+    background-color: var(--theme-color-highlight) !important;
+    color: white !important;
+}
+
+.modal-header.text-bg-success {
+    background-color: var(--theme-color-primary) !important;
+    color: white !important;
+}
+
+/* 按鈕顏色替換 */
+.btn-warning {
+    background-color: var(--theme-color-highlight);
+    border-color: var(--theme-color-highlight);
+    color: white;
+}
+
+.btn-success,
+.btn-primary {
+    background-color: var(--theme-color-primary);
+    border-color: var(--theme-color-primary);
+    color: white;
+}
+
+.btn-outline-danger {
+    border-color: var(--theme-color-primary);
+    color: var(--theme-color-primary);
+}
+
+.btn-outline-success {
+    border-color: var(--theme-color-highlight);
+    color: var(--theme-color-highlight);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+.timeline-section {
+    position: relative;
+}
+
+.timeline-section::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--theme-color-primary);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-caption-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+}
+
+.carousel-caption-text h1,
+.carousel-caption-text p {
+    text-shadow: 1px 1px 3px #000;
+}
+
+.s07-userimg {
+    width: 120px;
+    height: 120px;
+    background-color: var(--theme-color-primary);
+    background-image: url(images/marketing/marketing03.avif);
+    border-radius: 10px;
+    transition: transform 0.6s, box-shadow 0.6s, border-radius 2s;
+}
+
+.s07-userimg:hover {
+    background-image: url(images/02.jpg);
+    transform: scale(1.2);
+    box-shadow: 0 0 10px 5px rgba(160, 185, 80, 0.8);
+    border-radius: 50%;
+}
+
+.card-marketing-section {
+    background-color: var(--theme-color-secondary);
+    padding: 60px 0;
+}
+
+.card-marketing-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 15px;
+    padding: 25px;
+    background-color: #ffffff;
+}
+
+.card-marketing-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.s04-content {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.s10-text {
+    padding: 20px;
+    border-radius: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.s10-text .h3 {
+    color: white !important;
+    font-weight: 700;
+}
+
+.s10-text p {
+    color: #eee;
+}
+
+.process-item {
+    padding: 20px;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+
+.process-item:hover {
+    background-color: rgba(160, 185, 80, 0.1);
+}
+
+@media screen and (max-width: 992px) {
+    .s04-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .timeline-section::before {
+        display: none;
+    }
+
+    .s06-text {
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 2px 1px #ccc;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .s06-text p {
+        color: white;
+    }
+
+    #s08 dt,
+    #s08 dd {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .s07-userimg {
+        margin-bottom: 15px;
+    }
+
+    .s10-text {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+        text-align: left !important;
+    }
+
+    .s10-text .badge {
+        margin-bottom: 10px;
+    }
+
+    .s10-text .btn {
+        margin-top: 15px;
+    }
+}

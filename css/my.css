@@ -1,0 +1,193 @@
+/* 使用 google font
+   網址：https://fonts.google.com/selection/embed */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+/* CSS 的 :root 是一個偽類選擇器，它選取文檔的根元素，在HTML 中就是 <html> 元。 
+它的主要用途是宣告全域的CSS 變數，可以在整個網頁中重複使用，
+例如定義顏色、字體大小或間距等，這能讓樣式管理更集中、更容易維護。  */
+:root{
+    /* 廣泛用途 */
+    --color01: #E81E25;
+    --color02: #1D6A96;  
+    --color03: #FFD954;
+    --color04: #E4B660;
+    --color05: #D1DDDB;
+    --color06: #7BC5AE;   
+    --color07: #FE929F;
+    --color08: #FFFFFF;   /* 白字 */
+    --color09: #FCDFF3;
+    --color10: #8fc5f7;
+    --color11: #9AB878;
+    --color12: #8F8681;
+    --color13: #0A0A0A;
+    --color14: #A46843;
+    --color15: #F2AB39;
+    --color16: #044d77;
+    --color17: #A46843;
+    --color18: #A46843;
+    --color19: #A46843;
+    --color20: #A46843;
+
+    /* 🎨 電玩霓虹主題色系 */
+    --color21: #0f0f1a;   /* 深底背景 */
+    --color22: #14182b;   /* 導覽列背景 */
+    --color23: #1e1f3b;   /* 卡片底 */
+    --color24: #2a2e4b;   /* 次要底色 */
+    --color25: #0a0c18;   /* 全域背景 */
+    --color26: #00f5ff;   /* 亮青藍 */
+    --color27: #ff00d4;   /* 亮粉紫 */
+    --color28: #11152a;   /* content 背景 */
+    --color29: #282c4f;
+    --color30: #1de9b6;   /* hover亮綠 */
+    --color31: #ff9800;
+    --color32: #2196f3;
+    --color33: #e91e63;
+    --color34: #673ab7;
+    --color35: #03a9f4;
+    
+    /* 背景色 */
+    --bgcolor01: #FCDFF3;
+
+    /* 文字顏色 */
+    --textcolor01: #FFFFFF;
+    --textcolor02: #FCDFF3;
+    --textcolor03: #003E19;
+    --textcolor04: #f5f5f5;
+    --textcolor05: #bbbbbb;
+    --textcolor06: #00f5ff;    
+}  
+
+body{
+    font-family: "Zen Maru Gothic", sans-serif;  /* 套用 google font */  
+}
+
+/* 字體粗細 */
+.fw-100{
+    font-weight: 100;
+}
+.fw-200{
+    font-weight: 200;
+}
+.fw-300{
+    font-weight: 300;
+}
+.fw-400{
+    font-weight: 400;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fw-700{
+    font-weight: 700;
+}
+.fw-800{
+    font-weight: 800;
+}
+.fw-900{
+    font-weight: 900;
+}
+
+/* 排版用 */
+.bg-01{
+    background-color: var(--color02);
+}
+
+.bg-cover {
+    mask-position: center center;
+    background-size: cover;
+}
+
+
+/* roller 應用 */
+/* 由上往下 */
+.roller-box-t {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-box-t .roller {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(141, 219, 67, 0.5);
+    transform: translateY(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.roller-box-t:hover .roller {
+    transform: translateX(0);
+    transition: transform 1.5s;
+}
+
+/* 由下往上 */
+.roller-box-b {
+    position: relative;
+    overflow: hidden;
+}
+.roller-box-b .roller {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(141, 219, 67, 0.5);
+    transform: translateY(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.roller-box-b:hover .roller {
+    transform: translateX(0);
+    transition: transform 1.5s;
+}
+
+/* 由右往左 */
+.roller-box-r {
+    position: relative;
+    overflow: hidden;
+}
+.roller-box-r .roller {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(141, 219, 67, 0.5);
+    transform: translateX(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.roller-box-r:hover .roller {
+    transform: translateY(0);
+    transition: transform 1.5s;
+}
+
+/* 由左往右 */
+.roller-box-l {
+    position: relative;
+    overflow: hidden;
+}
+.roller-box-l .roller {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(141, 219, 67, 0.5);
+    transform: translateX(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.roller-box-l:hover .roller {
+    transform: translateY(0);
+    transition: transform 1.5s;
+}
